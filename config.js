@@ -4,8 +4,8 @@
 var CONFIG = {
 
   /* WhatsApp number with country code, no plus sign. Example: 919876543210 */
-  phone: "91XXXXXXXXXX",
-  phoneDisplay: "+91 XXXXX XXXXX",
+  phone: "7497813642",
+  phoneDisplay: "+917497813642",
 
   /* Real demo videos (optional).
      Upload a screen recording to YouTube (Unlisted is fine), then paste only the video ID here.
