@@ -4,12 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nine Automation | Hours of manual work, done in minutes</title>
-<meta name="description" content="Nine Automation builds custom automations for Excel, SAP and web portals. Turn hours of daily manual work into minutes. Book a free trial.">
+<meta name="description" content="Nine Automation builds custom automations for Excel, SAP and web portals. Start with a 3-day free trial, then pay per project.">
 <meta name="theme-color" content="#0B1B2B">
+<meta property="og:title" content="Nine Automation">
+<meta property="og:description" content="Custom automation for Excel, SAP and web portals. 3-day free trial, then pay per project.">
+<meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230B1B2B'/%3E%3Ctext x='32' y='46' font-size='40' font-weight='800' text-anchor='middle' fill='%23F5A100' font-family='Arial'%3E9%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Sora:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,79 +22,94 @@
     <a class="brand" href="#top" aria-label="Nine Automation home">
       <span class="mark">9</span><span><b>Nine</b> Automation</span>
     </a>
-    <nav aria-label="Main">
+    <nav id="mainNav" aria-label="Main">
       <a href="#services">Services</a>
+      <a href="#demos">Demos</a>
       <a href="#savings">Savings</a>
-      <a href="#how">How it works</a>
+      <a href="#how">Process</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#reviews">Reviews</a>
       <a href="#faq">FAQ</a>
     </nav>
-    <a class="btn amber small" href="#book">Book free trial</a>
+    <a class="btn amber small nav-cta" href="#book">Book free trial</a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav"><span></span><span></span><span></span></button>
   </div>
 </header>
 
 <main id="top">
 
+  <!-- HERO -->
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <p class="eyebrow">Business process automation</p>
+        <span class="badge">3-day free trial &middot; No cost &middot; No obligation</span>
         <h1>Hours of manual work.<br><em>Done in minutes.</em></h1>
         <p class="lead">We build custom automations for Excel, SAP and web portals. Your team stops repeating the same clicks every day and gets back to work that matters.</p>
         <div class="row">
-          <a class="btn amber" href="#book">Book a free trial</a>
-          <a class="btn outline-light" href="#savings">See your savings</a>
+          <a class="btn amber" href="#book">Start your free trial</a>
+          <a class="btn outline-light" href="#demos">Watch demos</a>
         </div>
         <ul class="ticks">
-          <li>Free trial on your own data</li>
-          <li>No software to buy</li>
-          <li>Your logins stay with you</li>
+          <li>Trial on your own data, under a short written agreement</li>
+          <li>Pay only if you like the result, priced per project</li>
+          <li>Your portal logins stay on your computer</li>
         </ul>
       </div>
 
       <div class="card-example" aria-label="Example time saved">
         <p class="card-title">Example: daily work, by hand vs with Nine</p>
-
         <div class="ex">
-          <div class="ex-head"><span>Portal document downloads (100 records)</span></div>
+          <div class="ex-head">Portal document downloads (100 records)</div>
           <div class="ex-line"><span class="lab">By hand</span><div class="bar"><i class="hand" style="width:100%"></i></div><span class="val">3h 20m</span></div>
           <div class="ex-line"><span class="lab">With Nine</span><div class="bar"><i class="nine" style="width:6%"></i></div><span class="val">12m</span></div>
         </div>
-
         <div class="ex">
-          <div class="ex-head"><span>SAP invoice printing (120 invoices)</span></div>
+          <div class="ex-head">SAP invoice printing (120 invoices)</div>
           <div class="ex-line"><span class="lab">By hand</span><div class="bar"><i class="hand" style="width:100%"></i></div><span class="val">3h</span></div>
           <div class="ex-line"><span class="lab">With Nine</span><div class="bar"><i class="nine" style="width:14%"></i></div><span class="val">25m</span></div>
         </div>
-
         <div class="ex">
-          <div class="ex-head"><span>Daily Excel MIS report (6 files)</span></div>
+          <div class="ex-head">Daily Excel MIS report (6 files)</div>
           <div class="ex-line"><span class="lab">By hand</span><div class="bar"><i class="hand" style="width:100%"></i></div><span class="val">1h 30m</span></div>
           <div class="ex-line"><span class="lab">With Nine</span><div class="bar"><i class="nine" style="width:5%"></i></div><span class="val">4m</span></div>
         </div>
-
         <p class="fine">Illustrative examples with sample data. Real time saved depends on your process and volume.</p>
       </div>
     </div>
   </section>
 
+  <div class="trust">
+    <div class="wrap trust-row">
+      <span class="trust-label">Works with</span>
+      <ul>
+        <li>Microsoft Excel</li><li>SAP GUI</li><li>Web portals</li><li>PDF and files</li><li>Windows 7, 10, 11</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
   <section id="services">
     <div class="wrap">
       <p class="eyebrow dark-text">Services</p>
       <h2>Automation for the work your team repeats every day</h2>
       <div class="grid4">
         <article class="card">
+          <span class="ico" aria-hidden="true">01</span>
           <h3>Web portal automation</h3>
-          <p>Log in, search records, download documents, read status and write the results back to Excel.</p>
+          <p>Log in, search records, download documents, read status and remarks, and write the results back to Excel.</p>
         </article>
         <article class="card">
+          <span class="ico" aria-hidden="true">02</span>
           <h3>SAP task automation</h3>
           <p>Bulk invoice printing and repeated T-code work, done on your own SAP screen without complex scripting.</p>
         </article>
         <article class="card">
+          <span class="ico" aria-hidden="true">03</span>
           <h3>Excel and MIS reports</h3>
           <p>Merge files, clean data and build pivots and dashboards automatically, every day.</p>
         </article>
         <article class="card">
+          <span class="ico" aria-hidden="true">04</span>
           <h3>Data entry and files</h3>
           <p>Fill forms from Excel, rename and sort PDFs and files, with a clear error log for every run.</p>
         </article>
@@ -99,7 +117,22 @@
     </div>
   </section>
 
-  <section id="savings" class="alt">
+  <!-- DEMOS -->
+  <section id="demos" class="alt">
+    <div class="wrap">
+      <p class="eyebrow dark-text">See it in action</p>
+      <h2>Watch how each automation works</h2>
+      <p class="muted">Pick a service to see a walkthrough. These use dummy data so no client information is shown.</p>
+      <div class="demo-tabs" id="demoTabs" role="tablist" aria-label="Choose a demo"></div>
+      <div class="demo">
+        <div class="demo-stage" id="demoStage"></div>
+        <div class="demo-info" id="demoInfo"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SAVINGS -->
+  <section id="savings">
     <div class="wrap two">
       <div>
         <p class="eyebrow dark-text">Savings calculator</p>
@@ -122,30 +155,92 @@
     </div>
   </section>
 
-  <section id="how">
+  <!-- PROCESS -->
+  <section id="how" class="alt">
     <div class="wrap">
       <p class="eyebrow dark-text">How it works</p>
-      <h2>Four simple steps</h2>
+      <h2>From first message to running automation</h2>
       <ol class="steps">
-        <li><span>1</span><h3>Tell us the task</h3><p>Share the work your team repeats every day.</p></li>
-        <li><span>2</span><h3>Free trial</h3><p>We run one process on your sample data, under a short agreement.</p></li>
-        <li><span>3</span><h3>Approve and build</h3><p>Happy with the trial? Approve the quote and we build the full tool.</p></li>
-        <li><span>4</span><h3>Install and support</h3><p>We install it, train your team and update it when systems change.</p></li>
+        <li><span>1</span><h3>Tell us the task</h3><p>Share the work your team repeats every day. A short call or WhatsApp is enough.</p></li>
+        <li class="hl"><span>2</span><h3>3-day free trial</h3><p>We automate one process on your sample data, under a short agreement. It costs nothing.</p></li>
+        <li><span>3</span><h3>Project quote</h3><p>If you like the result, we send a quote based on your project. You approve before paying.</p></li>
+        <li><span>4</span><h3>Install and support</h3><p>We build the full tool, install it, train your team and update it when systems change.</p></li>
       </ol>
     </div>
   </section>
 
+  <!-- PRICING -->
+  <section id="pricing">
+    <div class="wrap">
+      <p class="eyebrow dark-text">Pricing</p>
+      <h2>Free for 3 days. Then pay per project.</h2>
+      <p class="muted">Every business works differently, so we do not use a fixed price list. You see the full quote before you pay anything.</p>
+      <div class="price-grid">
+        <div class="pcard">
+          <span class="ptag free">Days 1 to 3</span>
+          <h3>Free trial</h3>
+          <p>One process automated on your sample data.</p>
+          <ul>
+            <li>No cost, no obligation</li>
+            <li>Covered by a written agreement</li>
+            <li>You check the results yourself</li>
+          </ul>
+        </div>
+        <div class="pcard">
+          <span class="ptag">After the trial</span>
+          <h3>Project quote</h3>
+          <p>A clear price for your exact project.</p>
+          <ul>
+            <li>Number of workflows</li>
+            <li>Number of portals or systems</li>
+            <li>Volume and exceptions to handle</li>
+            <li>Number of computers to install on</li>
+          </ul>
+        </div>
+        <div class="pcard">
+          <span class="ptag">After you approve</span>
+          <h3>Pay and go live</h3>
+          <p>Pay for the project, we build and install it.</p>
+          <ul>
+            <li>Install and training included</li>
+            <li>Optional monthly support, quoted separately</li>
+            <li>Updates when portals or SAP screens change</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row" style="margin-top:28px">
+        <a class="btn navy" href="#book">Start your free trial</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" class="alt">
+    <div class="wrap">
+      <p class="eyebrow dark-text">Client reviews</p>
+      <h2>What our clients say</h2>
+      <div class="grid3" id="reviewGrid"></div>
+      <div class="empty-card" id="reviewEmpty" hidden>
+        <h3>We are onboarding our first clients</h3>
+        <p>Reviews from real clients will appear here after their projects. Your free trial costs nothing, so you can judge the work yourself before deciding.</p>
+        <a class="btn navy small" href="#book">Start your free trial</a>
+      </div>
+      <p class="review-cta" id="reviewCta" hidden></p>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
   <section id="book" class="dark">
     <div class="wrap two">
       <div>
         <p class="eyebrow">Free trial</p>
-        <h2>Book your free trial</h2>
+        <h2>Book your 3-day free trial</h2>
         <p class="lead-sm">Tell us what you want to automate and when you are free. We confirm on WhatsApp the same day.</p>
         <ul class="ticks">
           <li>One process automated on your sample data</li>
-          <li>For example up to 25 records or 3 working days</li>
+          <li>3 working days, completely free</li>
           <li>Written agreement protects your data and our work</li>
-          <li>No cost and no obligation to buy</li>
+          <li>No obligation to buy. Pay only if you approve the quote</li>
         </ul>
       </div>
 
@@ -155,8 +250,8 @@
         <div class="field"><label for="fPhone">Your phone number</label><input id="fPhone" type="tel" autocomplete="tel" inputmode="tel" placeholder="So we can call or message you"></div>
         <div class="field"><label for="fTask">What do you want to automate?</label><textarea id="fTask" rows="3" placeholder="Example: Download 100 documents from a portal every morning and update Excel" required></textarea></div>
         <div class="split">
-          <div class="field"><label for="fDate">Preferred day</label><input id="fDate" type="date"></div>
-          <div class="field"><label for="fSlot">Preferred time</label>
+          <div class="field"><label for="fDate">Preferred start day</label><input id="fDate" type="date"></div>
+          <div class="field"><label for="fSlot">Preferred call time</label>
             <select id="fSlot">
               <option>Morning (10 AM to 1 PM)</option>
               <option>Afternoon (2 PM to 5 PM)</option>
@@ -171,16 +266,26 @@
     </div>
   </section>
 
+  <!-- FAQ -->
   <section id="faq" class="alt">
     <div class="wrap narrow">
       <p class="eyebrow dark-text">FAQ</p>
       <h2>Common questions</h2>
+      <details><summary>What exactly happens in the 3-day free trial?</summary><p>We automate one process on your sample data, under a short written agreement. You check the results yourself. If you like them, we send a project quote. If not, you owe nothing.</p></details>
+      <details><summary>How much does it cost after the trial?</summary><p>Pricing is per project. It depends on the number of workflows, portals or systems, volume, and how many computers we install on. You see the full quote before you pay anything.</p></details>
       <details><summary>Will it work on our old office computers?</summary><p>Our tools are designed for Windows 7, 10 and 11. We check it on your actual computer during the free trial.</p></details>
       <details><summary>Do you keep our portal passwords?</summary><p>No. Logins stay on your computer. If a portal sends an OTP, your team types it in.</p></details>
-      <details><summary>What if a portal or SAP screen changes later?</summary><p>The support plan covers it. We update the tool so your daily work does not stop.</p></details>
+      <details><summary>What if a portal or SAP screen changes later?</summary><p>The monthly support plan covers it. We update the tool so your daily work does not stop.</p></details>
       <details><summary>How do we know the results are correct?</summary><p>Every record is matched by its own ID, every run saves a log, and anything unclear is flagged for a person to review.</p></details>
-      <details><summary>How much does it cost?</summary><p>Projects start from INR 15,000 for one workflow, plus optional monthly support from INR 2,000. We send an exact quote after the free trial.</p></details>
       <details><summary>Can you install it if we are in another city?</summary><p>Yes. Installation works remotely. You run one installer and we guide you through the rest.</p></details>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="cta-band">
+    <div class="wrap cta-inner">
+      <h2>Ready to get your team's time back?</h2>
+      <a class="btn amber" href="#book">Start your 3-day free trial</a>
     </div>
   </section>
 
@@ -188,13 +293,30 @@
 
 <footer>
   <div class="wrap foot">
-    <span>&copy; <span id="yr"></span> Nine Automation &middot; Farukhnagar, Gurugram, Haryana</span>
-    <span id="phoneShow"></span>
+    <div>
+      <a class="brand" href="#top"><span class="mark">9</span><span><b>Nine</b> Automation</span></a>
+      <p class="foot-text">Custom automation for Excel, SAP and web portals.</p>
+    </div>
+    <div>
+      <p class="foot-head">Explore</p>
+      <a href="#services">Services</a>
+      <a href="#demos">Demos</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div>
+      <p class="foot-head">Contact</p>
+      <span>Farukhnagar, Gurugram, Haryana</span>
+      <span id="phoneShow"></span>
+      <a id="footWa" href="#book">Chat on WhatsApp</a>
+    </div>
   </div>
+  <div class="wrap copy">&copy; <span id="yr"></span> Nine Automation. All rights reserved.</div>
 </footer>
 
 <a class="fab" id="fab" href="#book" aria-label="Chat on WhatsApp">WhatsApp</a>
 
+<script src="config.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
