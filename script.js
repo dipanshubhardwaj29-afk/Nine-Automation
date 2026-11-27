@@ -36,7 +36,7 @@
     var pct = Math.min(num("cPct"), 100) / 100;
     var hours = num("cLr") * num("cMin") * 26 / 60 * pct;
     $("rHours").textContent = Math.round(hours).toLocaleString("en-IN");
-    $("rMoney").textContent = "\u20B9" + Math.round(hours * num("cCost")).toLocaleString("en-IN");
+    $("rMoney").textContent = "₹" + Math.round(hours * num("cCost")).toLocaleString("en-IN");
   }
   ["cLr", "cMin", "cCost", "cPct"].forEach(function (id) { $(id).addEventListener("input", calc); });
   calc();
@@ -116,6 +116,9 @@
   var tabsEl = $("demoTabs"), stage = $("demoStage"), info = $("demoInfo");
   var cur = 0, timers = [];
 
+  function hasRealVideo(d) {
+    return !!((CONFIG.videos && CONFIG.videos[d.key]) || (CONFIG.localVideos && CONFIG.localVideos[d.key]));
+  }
   function clearTimers() { timers.forEach(clearTimeout); timers = []; }
   function cls(kind) { return kind === "warn" ? "st-warn" : "st-ok"; }
 
@@ -150,7 +153,7 @@
   function play(animate) {
     clearTimers();
     var d = demos[cur];
-    if (CONFIG.videos && CONFIG.videos[d.key]) { return; }
+    if (hasRealVideo(d)) { return; }
     var trs = $("wtBody").children, total = d.rows.length;
     var doAnim = animate && !reduce;
     if (!doAnim) {
@@ -189,6 +192,12 @@
       stage.innerHTML = '<div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/' + encodeURIComponent(vid) +
         '" title="' + esc(d.title) + ' demo" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>';
       renderInfo(d, true);
+    } else if (CONFIG.localVideos && CONFIG.localVideos[d.key]) {
+      var poster = CONFIG.posters && CONFIG.posters[d.key];
+      stage.innerHTML = '<div class="video-frame"><video controls playsinline preload="metadata"' +
+        (poster ? ' poster="' + esc(poster) + '"' : "") + ' src="' + esc(CONFIG.localVideos[d.key]) + '">Your browser does not support video.</video></div>' +
+        '<p class="sample-note">Real screen recording of our POD Auto Downloader. Client details have been removed.</p>';
+      renderInfo(d, true);
     } else {
       buildMock(d);
       renderInfo(d, false);
@@ -223,7 +232,7 @@
       var rating = Math.max(1, Math.min(5, parseInt(r.rating, 10) || 5));
       var el = document.createElement("article");
       el.className = "review";
-      el.innerHTML = '<div class="stars" aria-label="' + rating + ' out of 5 stars">' + "\u2605".repeat(rating) + "</div>" +
+      el.innerHTML = '<div class="stars" aria-label="' + rating + ' out of 5 stars">' + "★".repeat(rating) + "</div>" +
         "<blockquote>" + esc(r.text) + "</blockquote>" +
         '<div class="who"><b>' + esc(r.name) + "</b><span>" + esc(r.role) + "</span></div>";
       grid.appendChild(el);
