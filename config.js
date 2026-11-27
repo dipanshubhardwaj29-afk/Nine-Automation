@@ -11,7 +11,12 @@ var CONFIG = {
      Upload a screen recording to YouTube (Unlisted is fine), then paste only the video ID here.
      Example: for https://www.youtube.com/watch?v=AbC123xyz09 the ID is AbC123xyz09
      Leave "" to show the animated sample demo instead. */
-  videos: {
+  videos: {  localVideos: {
+    portal: "videos/pod-demo.mp4"
+  },
+  posters: {
+    portal: "videos/pod-poster.jpg"
+  },
     portal: "",
     sap: "",
     excel: "",
